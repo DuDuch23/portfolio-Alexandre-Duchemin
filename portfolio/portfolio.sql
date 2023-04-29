@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 29 avr. 2023 à 22:40
+-- Généré le : sam. 29 avr. 2023 à 23:01
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `message`
+-- Structure de la table `message_portfolio`
 --
 
-CREATE TABLE `message` (
+CREATE TABLE `message_portfolio` (
   `id_message` int(11) NOT NULL,
   `nom_message` varchar(50) NOT NULL,
   `prenom_message` varchar(50) NOT NULL,
@@ -37,13 +37,20 @@ CREATE TABLE `message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Déchargement des données de la table `message_portfolio`
+--
+
+INSERT INTO `message_portfolio` (`id_message`, `nom_message`, `prenom_message`, `email_message`, `sujet_message`, `contenu_message`) VALUES
+(1, 'Duchemin', 'Alexandre', 'alexandre.duchemin@lyceestvincent.fr', 'demande-offre', 'efvesrtet');
+
+--
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `message`
+-- Index pour la table `message_portfolio`
 --
-ALTER TABLE `message`
+ALTER TABLE `message_portfolio`
   ADD PRIMARY KEY (`id_message`);
 
 --
@@ -51,10 +58,10 @@ ALTER TABLE `message`
 --
 
 --
--- AUTO_INCREMENT pour la table `message`
+-- AUTO_INCREMENT pour la table `message_portfolio`
 --
-ALTER TABLE `message`
-  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `message_portfolio`
+  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
